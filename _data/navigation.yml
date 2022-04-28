@@ -9,8 +9,8 @@ main:
   # - title: "Teaching"
   #   url: /teaching/
 
-  - title: "Software & Applications"
-    url: /software-and-applications/
+  - title: "Applications"
+    url: /applications/
 
   - title: "CV"
     url: /cv/

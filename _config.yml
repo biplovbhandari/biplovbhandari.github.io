@@ -181,7 +181,7 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  software_applications:
+  applications:
     output: true
     permalink: /:collection/:path/
   talks:
@@ -230,7 +230,7 @@ defaults:
   # _software_applications
   - scope:
       path: ""
-      type: software-and-applications
+      type: applications
     values:
       layout: single
       author_profile: true
