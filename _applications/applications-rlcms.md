@@ -4,3 +4,5 @@ excerpt: "This system guides users in applying peer-reviewed methods and cloud c
 <br/><img style='width:600px;height:300px;' src='/images/rlcms.jpg'>"
 collection: applications
 ---
+
+<img style='width:600px;height:300px;' src='/images/rlcms.jpg'>

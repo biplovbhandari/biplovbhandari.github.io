@@ -4,3 +4,5 @@ excerpt: "This service provides near real-time rainfall and stream height data f
 <br/><img style='width:600px;height:300px;' src='/images/vrsgs.png'>"
 collection: applications
 ---
+
+<img style='width:600px;height:300px;' src='/images/vrsgs.png'>

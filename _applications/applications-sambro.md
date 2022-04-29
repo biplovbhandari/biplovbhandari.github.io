@@ -4,3 +4,5 @@ excerpt: "We make use of an International warning standard to bridge the last mi
 <br/><img style='width:600px;height:300px;' src='/images/sambro.png'>"
 collection: applications
 ---
+
+<img style='width:600px;height:300px;' src='/images/sambro.png'>

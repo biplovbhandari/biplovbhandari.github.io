@@ -4,3 +4,5 @@ excerpt: "With this tool, variable risk for floods and potentially for droughts 
 <br/><img style='width:600px;height:300px;' src='/images/hfat.png'>"
 collection: applications
 ---
+
+<img style='width:600px;height:300px;' src='/images/hfat.png'>

@@ -4,3 +4,5 @@ excerpt: "The Risk Assessment Platform is an online tool that is designed to be 
 <br/><img style='width:400px;height:300px;' src='/images/rap.png'>"
 collection: applications
 ---
+
+<img style='width:400px;height:300px;' src='/images/rap.png'>
