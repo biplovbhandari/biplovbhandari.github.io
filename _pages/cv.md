@@ -113,7 +113,7 @@ Talks
 Awards
 ======
 * Graduate Dean's List for Spring 2022 at the University of Alabama in Huntsville.
-* The FIG Foundation Young Surveyor Award 2017.
+* [The FIG Foundation Young Surveyor Award 2017.](https://www.fig.net/figfoundation/recipients/bhandari_biplov.asp)
 * [40 Under 40, 2017: Remarkable Geospatial Professionals by xyHt magazine, USA](http://biplovbhandari.github.io/files/xyht_winter_supplement_2017.pdf).
 * [Best Paper Award and Young Author Recognition during the 8th ITU Kaleidoscope academic conference.](https://www.ait.ac.th/2016/11/young-author-award-for-ait-researcher/)
 * Judge in Nation Wide Software Competition at 6th Gandaki College of Engineering and Science (GCES) IT Mahotsav 2016 in Pokhara, Nepal.
