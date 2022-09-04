@@ -24,7 +24,10 @@ Education
 
 Work experience
 ======
-* Aug 2020 - present: Graduate Research Assistant
+* Aug 2022 - Present: Geospatial Data Scientist/ Research Associate for the NASA-SERVIR Program.
+  * Earth System Science Center, The University of Alabama in Huntsville
+
+* Aug 2020 - Aug 2022: Graduate Research Assistant
   * NASA-SERVIR at the Earth System Science Center, The University of Alabama in Huntsville
 
 * Jan 2020 - Aug 2020: Data Scientist
