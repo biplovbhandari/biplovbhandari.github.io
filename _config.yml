@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Biplov Bhandari"
   avatar           : "profile.jpg"
-  bio              : "Graduate Research Assistant and MS Candidate at the University of Alabama in Huntsville"
+  bio              : "Geospatial Data Scientist & Research Assistant at the Earth System Science Center in National Space Science & Technology Center"
   location         : "Huntsville, AL"
   employer         :
   pubmed           : 
@@ -106,7 +106,7 @@ author:
   orcid            : "https://orcid.org/0000-0001-6169-8236"
   pinterest        :
   soundcloud       :
-  stackoverflow    : "2503890/biplov-bhandari" # http://stackoverflow.com/users/123456/username
+  # stackoverflow    : "2503890/biplov-bhandari" # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
   twitter          : "BiplovBhandari"
