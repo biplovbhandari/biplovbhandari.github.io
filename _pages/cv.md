@@ -11,6 +11,7 @@ redirect_from:
 
 Education
 ======
+<<<<<<< HEAD
 * B.E. in Geomatics Engineering, Kathmandu University, 2014
   * [Thesis: Generation of high-resolution DSM using UAV images](https://www.fig.net/resources/proceedings/fig_proceedings/fig2015/papers/ts08c/TS08C_bhandari_oli_et_al_7439.pdf)
   * Kathmandu University School of Engineering Scholarship.
@@ -59,6 +60,8 @@ Consulting experience
 * Jan 2020 - Aug 2020: Google Earth Engine Consultant
   * NAXA Pvt Ltd
 
+=======
+
 Skills
 ======
 * Programming Language
@@ -74,7 +77,7 @@ Skills
 
 Publications (Peer-reviewed)
 ======
-  <ul>{% for post in site.publications %}
+  <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
@@ -103,16 +106,16 @@ Non-Peer Reviewed/Conference Proceedings
 
 Talks
 ======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
+  <ul>{% for post in site.talks reversed %}
+    {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
-  
+
 <!-- Teaching
 ======
-  <ul>{% for post in site.teaching %}
+  <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul> -->
-  
+
 Awards
 ======
 * Graduate Dean's List for Spring 2022 at the University of Alabama in Huntsville.
