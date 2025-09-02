@@ -25,7 +25,7 @@ author:
   avatar           : "profile.png"
   name             : "Biplov Bhandari"
   pronouns         : # example: "she/her"
-  bio              : "Machine Learning Scientist/Engineer focused on advanced geospatial analytics, environmental hazard monitoring, and scalable ML solutions."
+  bio              : "Machine Learning Scientist and Engineer specializing in geospatial analytics and scalable AI solutions. Experienced in building data-driven workflows that support decision-making, risk assessment, and innovation across environmental, commercial, and government sectors."
   location         : "Brooklyn, NY"
   employer         :
   uri              : "https://www.youtube.com/@TheGeoICT"
@@ -296,7 +296,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Chicago # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins

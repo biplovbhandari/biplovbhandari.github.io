@@ -17,45 +17,45 @@ author_profile: true
 .project-card {
   background: #fff;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: box-shadow 0.2s ease-in-out;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .project-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 .project-card__media {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%; /* 16:9 */
   height: 0;
   overflow: hidden;
-  background: #f0f0f0;
+  background: #f6f7f8; /* subtle skeleton bg */
 }
-.project-card__media iframe,
 .project-card__media img {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 .project-card__content {
-  padding: 1.5rem;
+  padding: 1.1rem 1.25rem 1.25rem 1.25rem;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 .project-card__title {
-  margin-top: 0;
-  font-size: 1.25rem;
+  margin: 0 0 0.35rem 0;
+  font-size: 1.15rem;
+  line-height: 1.35;
 }
 .project-card__title a {
   text-decoration: none;
-  color: #333;
+  color: #222;
 }
 .project-card__title a:hover {
   text-decoration: underline;
@@ -66,19 +66,31 @@ author_profile: true
   font-size: 0.95em;
   line-height: 1.6;
 }
-.project-card__excerpt img {
-  display: none; /* Hide images inside excerpt as they are now handled by the media container */
+.project-card__excerpt img { display: none; }
+.project-card__meta {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.project-tag {
+  font-size: 0.78rem;
+  background: #eef4ff;
+  color: #235;
+  border: 1px solid #d9e6ff;
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
 }
 .project-card__button {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
+  margin-top: 0.9rem;
+  padding: 0.6rem 1.1rem;
   background-color: #007bff;
-  color: white !important;
+  color: #fff !important;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 6px;
   text-decoration: none;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s ease;
   align-self: flex-start;
 }
 .project-card__button:hover {
@@ -90,26 +102,46 @@ author_profile: true
 <div class="project-grid">
   {% for post in site.projects %}
     <div class="project-card">
-      <div class="project-card__media">
+      <a class="project-card__media" href="{{ post.url | relative_url }}" aria-label="Open project: {{ post.title }}">
         {% if post.youtube_id %}
-          <iframe
-            src="https://www.youtube.com/embed/{{ post.youtube_id }}?autoplay=1&mute=1&loop=1&playlist={{ post.youtube_id }}&controls=0&showinfo=0&autohide=1"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+          <img
+            src="https://img.youtube.com/vi/{{ post.youtube_id }}/hqdefault.jpg"
+            alt="{{ post.title }} thumbnail"
+            loading="lazy"
+          >
         {% elsif post.header.teaser %}
-          <a href="{{ post.url | relative_url }}" style="display: block; width: 100%; height: 100%;">
-            <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }} teaser">
-          </a>
+          <img
+            src="{{ post.header.teaser | relative_url }}"
+            alt="{{ post.title }} teaser"
+            loading="lazy"
+          >
+        {% else %}
+          <img
+            src="{{ '/images/project-placeholder.jpg' | relative_url }}"
+            alt="{{ post.title }} teaser"
+            loading="lazy"
+          >
         {% endif %}
-      </div>
+      </a>
+
       <div class="project-card__content">
-        <h2 class="project-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <h2 class="project-card__title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+
         <div class="project-card__excerpt">
           <p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>
         </div>
-        <a href="{{ post.url | relative_url }}" class="project-card__button">View Project</a>
+
+        {% if post.tags %}
+          <div class="project-card__meta">
+            {% for tag in post.tags %}
+              <span class="project-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <a href="{{ post.url | relative_url }}" class="project-card__button">Explore Project</a>
       </div>
     </div>
   {% endfor %}
