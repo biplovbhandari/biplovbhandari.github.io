@@ -11,7 +11,6 @@ redirect_from:
 
 Education
 ======
-<<<<<<< HEAD
 * B.E. in Geomatics Engineering, Kathmandu University, 2014
   * [Thesis: Generation of high-resolution DSM using UAV images](https://www.fig.net/resources/proceedings/fig_proceedings/fig2015/papers/ts08c/TS08C_bhandari_oli_et_al_7439.pdf)
   * Kathmandu University School of Engineering Scholarship.
@@ -60,7 +59,6 @@ Consulting experience
 * Jan 2020 - Aug 2020: Google Earth Engine Consultant
   * NAXA Pvt Ltd
 
-=======
 
 Skills
 ======
