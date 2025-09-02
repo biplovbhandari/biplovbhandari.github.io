@@ -7,7 +7,110 @@ author_profile: true
 
 {% include base_path %}
 
+<style>
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5em;
+}
+.project-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.project-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.project-card__media {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+.project-card__media iframe,
+.project-card__media img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-card__content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.project-card__title {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+.project-card__title a {
+  text-decoration: none;
+  color: #333;
+}
+.project-card__title a:hover {
+  text-decoration: underline;
+}
+.project-card__excerpt {
+  flex-grow: 1;
+  color: #555;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+.project-card__excerpt img {
+  display: none; /* Hide images inside excerpt as they are now handled by the media container */
+}
+.project-card__button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #007bff;
+  color: white !important;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  align-self: flex-start;
+}
+.project-card__button:hover {
+  background-color: #0056b3;
+  text-decoration: none;
+}
+</style>
 
-{% for post in site.projects %}
-  {% include archive-single.html %}
-{% endfor %}
+<div class="project-grid">
+  {% for post in site.projects %}
+    <div class="project-card">
+      <div class="project-card__media">
+        {% if post.youtube_id %}
+          <iframe
+            src="https://www.youtube.com/embed/{{ post.youtube_id }}?autoplay=1&mute=1&loop=1&playlist={{ post.youtube_id }}&controls=0&showinfo=0&autohide=1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        {% elsif post.header.teaser %}
+          <a href="{{ post.url | relative_url }}" style="display: block; width: 100%; height: 100%;">
+            <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }} teaser">
+          </a>
+        {% endif %}
+      </div>
+      <div class="project-card__content">
+        <h2 class="project-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <div class="project-card__excerpt">
+          <p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+        </div>
+        <a href="{{ post.url | relative_url }}" class="project-card__button">View Project</a>
+      </div>
+    </div>
+  {% endfor %}
+</div>
